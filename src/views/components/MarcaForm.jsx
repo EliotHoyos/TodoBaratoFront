@@ -5,7 +5,7 @@ function MarcaForm({onCrear, loading}){
     const [error, setError] = useState("");
 
     const handleSubmit = async (e) => {
-        e.prevenDefault();
+        e.preventDefault();
         setError("");
         try {
             await onCrear({ nombre });
