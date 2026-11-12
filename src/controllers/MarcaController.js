@@ -15,7 +15,7 @@ const MarcaController = {
             const { data } = await MarcaService.crear(marca.toRequestPayload());
             return Marca.fromResponse(data);
         }catch(err){
-            const mensajeBackend = err.response?.data.messaje;
+            const mensajeBackend = err.response?.data?.message;
             throw new Error(mensajeBackend || "No se pudo crear la marca");
         }
         
